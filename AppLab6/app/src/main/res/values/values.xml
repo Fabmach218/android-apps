@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="platos">
+        <item>- Seleccione el plato -</item>
+        <item>Ají de gallina</item>
+        <item>Arroz chaufa</item>
+        <item>Carapulcra con sopa seca</item>
+        <item>Ceviche</item>
+        <item>Lomo saltado</item>
+        <item>Pachamanca</item>
+    </string-array>
+</resources>

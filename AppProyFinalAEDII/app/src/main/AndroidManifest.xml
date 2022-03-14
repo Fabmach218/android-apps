@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.marangon.appproyfinalaedii">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="FoodFree"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppProyFinalAEDII">
+        <activity android:name=".controller.ActComentarios" />
+        <activity
+            android:name=".controller.ActDetalleProducto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.ActModificar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.ActCarrito"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.ActPerfil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.ActTienda"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppProyFinalAEDII.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controller.ActIniciarSesion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.ActRegistro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.ActInicio"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controller.ActRegistrarProducto"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

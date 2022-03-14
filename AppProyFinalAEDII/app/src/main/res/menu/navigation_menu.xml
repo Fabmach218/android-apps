@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuTienda"
+        android:icon="@drawable/ic_tienda"
+        android:title="Tienda"/>
+    <item
+        android:id="@+id/menuRegistro"
+        android:icon="@drawable/ic_registro"
+        android:title="Registrar producto" />
+    <item
+        android:id="@+id/menuCarrito"
+        android:icon="@drawable/ic_carrito"
+        android:title="Carrito" />
+    <item
+        android:id="@+id/menuPerfil"
+        android:icon="@drawable/ic_perfil"
+        android:title="Perfil" />
+
+</menu>

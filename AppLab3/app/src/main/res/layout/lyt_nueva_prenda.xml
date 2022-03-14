@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActNuevaPrenda">
+
+    <EditText
+        android:id="@+id/edtNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:hint="Nombre de la prenda"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/sprTalla"
+        app:layout_constraintStart_toStartOf="@+id/sprTalla"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sprTalla"
+        android:layout_width="231dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="37dp"
+        android:entries="@array/tallas"
+        app:layout_constraintBottom_toTopOf="@+id/edtPrecio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNom" />
+
+    <EditText
+        android:id="@+id/edtPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="45dp"
+        android:ems="10"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/sprStock"
+        app:layout_constraintStart_toStartOf="@+id/sprTalla"
+        app:layout_constraintTop_toBottomOf="@+id/sprTalla" />
+
+    <Spinner
+        android:id="@+id/sprStock"
+        android:layout_width="231dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
+        android:layout_marginBottom="44dp"
+        android:entries="@array/stock"
+        app:layout_constraintBottom_toTopOf="@+id/btnMenuPrincipal1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPrecio" />
+
+    <Button
+        android:id="@+id/btnRegistrarProducto"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:layout_marginBottom="245dp"
+        android:onClick="registrarPrenda"
+        android:text="Registrar Producto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnMenuPrincipal1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprStock"
+        app:layout_constraintVertical_bias="0.862" />
+
+    <Button
+        android:id="@+id/btnMenuPrincipal1"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="246dp"
+        android:onClick="regresarMP"
+        android:text="Regresar al Menú Principal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/sprStock" />
+</androidx.constraintlayout.widget.ConstraintLayout>

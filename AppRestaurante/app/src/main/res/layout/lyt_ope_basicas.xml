@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActOpeBasicas">
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="41dp"
+        android:text="Elija una operación"
+        app:layout_constraintBottom_toTopOf="@+id/sprOpe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sprOpe"
+        android:layout_width="270dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtN1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView" />
+
+    <EditText
+        android:id="@+id/edtN1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:hint="Primer Número"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edtN2"
+        app:layout_constraintStart_toStartOf="@+id/sprOpe"
+        app:layout_constraintTop_toBottomOf="@+id/sprOpe" />
+
+    <EditText
+        android:id="@+id/edtN2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:hint="Segundo Número"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintStart_toStartOf="@+id/edtN1"
+        app:layout_constraintTop_toBottomOf="@+id/edtN1" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="244dp"
+        android:onClick="calcularOperacion"
+        android:text="Calcular Operación"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edtN2"
+        app:layout_constraintTop_toBottomOf="@+id/edtN2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/detalles" android:title="Ver detalles"></item>
+    <item android:id="@+id/act_stock" android:title="Actualizar stock"></item>
+</menu>

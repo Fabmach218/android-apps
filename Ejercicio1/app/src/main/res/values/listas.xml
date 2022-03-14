@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="cursos">
+        <item>- Elija un curso -</item>
+        <item>Algoritmo II</item>
+        <item>Estadística y Probabilidad II</item>
+        <item>Física II</item>
+        <item>Microeconomía</item>
+        <item>Tecnología de Información II</item>
+    </string-array>
+
+</resources>

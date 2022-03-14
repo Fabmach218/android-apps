@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="listaDepartamentos">
+        <item>Arequipa</item>
+        <item>Ica</item>
+        <item>Lima</item>
+        <item>Tumbes</item>
+        <item>Piura</item>
+        <item>Lambayeque</item>
+        <item>La Libertad</item>
+        <item>Áncash</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:background="#211E1E">
+
+            <ImageView
+                android:id="@+id/imgFotoComentario"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="150dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtUsuarioComentario"
+                    android:layout_width="280dp"
+                    android:layout_height="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/txtComentario"
+                    android:layout_width="280dp"
+                    android:layout_height="90dp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txtFechaComentario"
+                    android:layout_width="280dp"
+                    android:layout_height="30dp"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
