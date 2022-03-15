@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
         personas.add(Persona(nombre,apellido,fecnac))
         edtRes.setText("Se ingresó el item")
 
+        edtNombre.setText("")
+        edtApellido.setText("")
+        edtFecNac.setText("")
+
     }
 
     fun listar(v : View){
@@ -43,9 +47,16 @@ class MainActivity : AppCompatActivity() {
         edtRes.setText("")
 
         for(persona in personas){
-            edtRes.append("Nombre: " + persona.nombre + "\nApellido: " + persona.apellido + "\nFecha de nacimiento: " + persona.fecnac)
+            edtRes.append("Nombre: " + persona.nombre + "\nApellido: " + persona.apellido + "\nFecha de nacimiento: " + persona.fecnac + "\n\n")
         }
 
+    }
+
+    fun limpiar(v : View){
+
+        personas = ArrayList<Persona>()
+
+        edtRes.setText("Se limpiaron los datos!!!")
 
     }
 
