@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActFormAlumno">
+
+    <EditText
+        android:id="@+id/edtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtApePat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvNombre" />
+
+    <TextView
+        android:id="@+id/txvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="7dp"
+        android:text="Nombre"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtNombre"
+        app:layout_constraintEnd_toStartOf="@+id/edtNombre"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegresarLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="regresarLista"
+        android:text="Regresar a la lista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardar"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreo" />
+
+    <Spinner
+        android:id="@+id/sprSexo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="62dp"
+        android:entries="@array/listaSexos"
+        app:layout_constraintBottom_toBottomOf="@+id/edtCorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvSexo"
+        app:layout_constraintTop_toTopOf="@+id/edtFecNac" />
+
+    <TextView
+        android:id="@+id/txvSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="65dp"
+        android:text="Sexo"
+        app:layout_constraintEnd_toStartOf="@+id/sprSexo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvFecNac" />
+
+    <EditText
+        android:id="@+id/edtFecNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:editable="false"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvFecNac"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvFecNac" />
+
+    <TextView
+        android:id="@+id/txvFecNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="281dp"
+        android:layout_marginEnd="12dp"
+        android:text="Fecha Nacimiento"
+        app:layout_constraintEnd_toStartOf="@+id/edtFecNac"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtApePat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvApePat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvApePat" />
+
+    <EditText
+        android:id="@+id/edtApeMat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvApeMat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvApeMat" />
+
+    <TextView
+        android:id="@+id/txvApeMat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="34dp"
+        android:text="Apellido Materno"
+        app:layout_constraintBottom_toTopOf="@+id/edtFecNac"
+        app:layout_constraintEnd_toStartOf="@+id/edtApeMat"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="guardarAlumno"
+        android:text="Guardar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRegresarLista"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegresarLista"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvApePat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="34dp"
+        android:text="Apellido Paterno"
+        app:layout_constraintBottom_toTopOf="@+id/edtApeMat"
+        app:layout_constraintEnd_toStartOf="@+id/edtApePat"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/txvSexo" />
+
+    <TextView
+        android:id="@+id/txvCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="23dp"
+        android:text="Correo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtCorreo"
+        app:layout_constraintEnd_toStartOf="@+id/edtCorreo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="0"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/txvApePat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
