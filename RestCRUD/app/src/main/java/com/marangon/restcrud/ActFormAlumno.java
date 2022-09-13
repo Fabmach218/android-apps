@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.marangon.restcrud.model.Alumno;
 import com.marangon.restcrud.model.AlumnoRespuesta;
 import com.marangon.restcrud.service.AlumnoService;
+import com.marangon.restcrud.utils.Utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -44,7 +45,7 @@ public class ActFormAlumno extends AppCompatActivity {
         setContentView(R.layout.lyt_form_alumno);
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://api-rest-spring-fetch.herokuapp.com/api/alumno/")
+                .baseUrl(Utils.URL_API)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -68,6 +69,7 @@ public class ActFormAlumno extends AppCompatActivity {
         edtFecNac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 DatePickerDialog datePickerDialog = new DatePickerDialog(ActFormAlumno.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int day) {
@@ -156,7 +158,7 @@ public class ActFormAlumno extends AppCompatActivity {
         }
 
         if(validaciones.equals("")){
-            Alumno alumno = new Alumno(id, nombre, apePat, apeMat, fecNac, sexo, correo);
+            Alumno alumno = new Alumno(id, nombre, apePat, apeMat, Utils.dateToString(fecNac), sexo, correo);
             Toast.makeText(this, "Alumno creado!!!", Toast.LENGTH_LONG).show();
             saveAlumno(alumno);
         }else{

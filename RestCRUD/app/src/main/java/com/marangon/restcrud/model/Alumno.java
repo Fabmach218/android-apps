@@ -14,12 +14,11 @@ public class Alumno {
     @SerializedName("ape_mat")
     private String apeMat;
     @SerializedName("fecha_nacimiento")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-ddTHH:mm:ss.SSSZZ:ZZ")
-    private Date fecNac;
+    private String fecNac;
     private String sexo;
     private String correo;
 
-    public Alumno(int id, String nombre, String apePat, String apeMat, Date fecNac, String sexo, String correo) {
+    public Alumno(int id, String nombre, String apePat, String apeMat, String fecNac, String sexo, String correo) {
         this.id = id;
         this.nombre = nombre;
         this.apePat = apePat;
@@ -61,11 +60,11 @@ public class Alumno {
         this.apeMat = apeMat;
     }
 
-    public Date getFecNac() {
+    public String getFecNac() {
         return fecNac;
     }
 
-    public void setFecNac(Date fecNac) {
+    public void setFecNac(String fecNac) {
         this.fecNac = fecNac;
     }
 
